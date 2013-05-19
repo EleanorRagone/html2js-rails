@@ -7,7 +7,7 @@ html2js, but for rails.  Converts AngularJS templates to JS to store in cache, c
 ```ruby
 # config/html2js.rb
 Html2js.configure do |config|
-      config.root = "#{Rails.root}/app/assets/templates"
+  config.root = "#{Rails.root}/app/assets/templates"
 end
 ```
 
