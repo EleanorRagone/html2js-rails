@@ -2,15 +2,18 @@
 html2js, but for rails.  Converts AngularJS templates to JS to store in cache, clientside.
 
 ## Setup:
-1.  create an initializer:
-```
+*  create an initializer: 
+
+```ruby
 # config/html2js.rb
 Html2js.configure do |config|
-  config.root = "#{Rails.root}/app/assets/templates"
+      config.root = "#{Rails.root}/app/assets/templates"
 end
 ```
-2.  Add the templates to the javascript manifest file:
-```
+
+*  Add the templates to the javascript manifest file:
+
+```javascript
 // app/assets/javascripts/application.js
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
@@ -30,12 +33,11 @@ end
 //= require_tree ../templates
 //= require_tree ./angular
 ```
-3.  Place your templates in `app/assets/templates`, and make sure they end in `.js.tpl.haml`.  That's what I use,
+
+*  Place your templates in `app/assets/templates`, and make sure they end in `.js.tpl.haml`.  That's what I use,
 that's what I know works.  It *should* work with just `.js.tpl`, but I haven't tried it.  It should equally work
 with, ERB, for example, but I haven't tried that either.
 
 
 ## Contributing
-Please, please contribute!  I hacked this together for my own use; if people find it useful I'll continue working on
-it.  If I've completely missed some major point, please let me know!  Otherwise, fork, commit,
-and send a pull request!
+Please feel free to fork, commit and send a pull request - or even just open an issue with recommendations for what you'd like to see improved!
